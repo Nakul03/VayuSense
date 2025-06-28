@@ -452,24 +452,24 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Key Metrics */}
           <div className="lg:col-span-1 space-y-6">
-            <AQICard aqi={data.aqi} />
+          <AQICard aqi={data.aqi} />
             <WeatherWidget 
               temperature={data.temperature}
               humidity={data.humidity}
               windSpeed={data.windSpeed}
             />
-            <HealthAdvice aqi={data.aqi} />
-          </div>
+          <HealthAdvice aqi={data.aqi} />
+        </div>
 
           {/* Right Column - Charts and Maps */}
           <div className="lg:col-span-2 space-y-6">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-              <AQIMap />
+          <AQIMap />
               <PollutionBreakdown data={data.history[data.history.length - 1]} />
             </div>
-            <AQIChart data={data.history} />
+          <AQIChart data={data.history} />
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-              <ForecastChart data={data.forecast} />
+          <ForecastChart data={data.forecast} />
               <AirQualityTrends data={data.history} />
             </div>
           </div>
